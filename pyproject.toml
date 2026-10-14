@@ -1,0 +1,27 @@
+[project]
+name = "mohamed-agentic-terminal"
+version = "0.1.1"
+description = "An MCP server for AI agents to execute shell commands, run Python code, manage files, and search codebases."
+readme = { file = "README.md", content-type = "text/markdown" }
+authors = [
+    { name = "Mohamed Mahmoud", email = "mohamedmahmoud8801@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "agentic-terminal>=0.1.0",
+    "fastmcp>=3.2.4,<4.0.0",
+    "langchain>=1.2.17",
+    "langchain-mcp-adapters>=0.2.2",
+    "mcp>=1.27.0,<2.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+agentic_terminal = "agentic_terminal.main:main"
